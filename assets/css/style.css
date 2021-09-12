@@ -1138,7 +1138,6 @@ label {
 
 .flex-split .f-left img {
   width: 100%;
-  padding: 15px;
   border-radius: 50%;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -1445,8 +1444,9 @@ label {
     font-family: 'DIN 2014';
     font-size: 34px;
   }
-  .flex-split.right-align {
-    gap: 0;
+  .flex-split.right-align .f-left .middle-content {
+    margin-left: -40px;
+    margin-right: 40px;
   }
 }
 

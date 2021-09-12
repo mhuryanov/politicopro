@@ -1051,7 +1051,6 @@ label {
     }
     img {
       width: 100%;
-      padding: 15px;
       border-radius: 50%;
       transition: all 1s;
 
@@ -1360,7 +1359,12 @@ label {
     }
   }
   .flex-split.right-align {
-    gap: 0;
+    .f-left {
+      .middle-content {
+        margin-left: -40px;
+        margin-right: 40px;
+      }
+    }
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 992px) {
