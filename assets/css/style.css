@@ -528,6 +528,8 @@ label {
   letter-spacing: 1px;
   height: 58px;
   margin-bottom: 0;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .navbar > .navbar-container {
@@ -716,10 +718,34 @@ label {
 
 .hero-section .hero-img {
   width: 50%;
+  position: relative;
 }
 
 .hero-section .hero-img img {
   width: 100%;
+  position: relative;
+}
+
+.hero-section .hero-img .circle-container {
+  display: inline-block;
+  width: 85%;
+  position: absolute;
+  top: 11%;
+}
+
+.hero-section .hero-img .circle-container .dummy {
+  margin-top: 100%;
+}
+
+.hero-section .hero-img .circle-container .circle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  opacity: 0.5;
+  border: 1px solid #dc0228;
 }
 
 .hero-section .hero-description {
@@ -735,6 +761,12 @@ label {
   margin: 10vw auto -10vw auto;
   display: block;
   text-align: center;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .hero-section .hero-description .arrow-down {
+    margin-top: 5vw;
+  }
 }
 
 .hero-content {
@@ -1100,11 +1132,21 @@ label {
           justify-content: space-between;
 }
 
+.flex-split .f-left .left-content {
+  width: 100%;
+}
+
 .flex-split .f-left img {
-  margin-top: 30px;
-  margin: 0 auto;
   width: 100%;
   padding: 15px;
+  border-radius: 50%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.flex-split .f-left img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .flex-split .f-right {
@@ -1259,7 +1301,6 @@ label {
   .navbar.past-main {
     -webkit-transition: all 0.6s ease;
     transition: all 0.6s ease;
-    height: 50px;
     background-color: rgba(255, 255, 255, 0.99);
     font-size: 14px;
     padding-top: 5px;
@@ -1267,7 +1308,8 @@ label {
     -webkit-box-shadow: 0 1px 5px 0 rgba(96, 96, 96, 0.3);
     box-shadow: 0 1px 5px 0 rgba(96, 96, 96, 0.3);
     -webkit-transition: height 0.6s;
-    transition: height 0.6s;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
   }
   .navbar.effect-main:active {
     -webkit-transition: height 0.6s;
