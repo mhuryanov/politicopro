@@ -660,6 +660,7 @@ label {
 }
 
 #main > .hero-section {
+  position: relative;
   max-width: unset;
   background-color: #eeeeee;
   width: 100%;
@@ -719,18 +720,39 @@ label {
 .hero-section .hero-img {
   width: 50%;
   position: relative;
+  overflow: hidden;
+}
+
+.hero-section .hero-img.hero-parallax {
+  position: absolute;
+  width: 100%;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.hero-section .hero-img.hero-parallax .size-builder {
+  margin-bottom: 52%;
+}
+
+.hero-section .hero-img .size-builder {
+  width: 100%;
+  display: block;
+  margin-bottom: 104%;
 }
 
 .hero-section .hero-img img {
-  width: 100%;
-  position: relative;
+  width: 50%;
+  position: absolute;
+  bottom: 0 !important;
+  left: 25% !important;
 }
 
 .hero-section .hero-img .circle-container {
   display: inline-block;
-  width: 85%;
+  width: 42.5%;
   position: absolute;
-  top: 11%;
+  top: 11% !important;
+  left: 25% !important;
 }
 
 .hero-section .hero-img .circle-container .dummy {

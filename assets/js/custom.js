@@ -211,4 +211,6 @@ $('.subscribe-form').submit(function(e) {
 });
 
 
+  let hero = document.getElementById('a-parallax')
+  var parallax = new Parallax(hero);
 });
