@@ -684,12 +684,14 @@ label {
     transform: rotate(-180deg);
     color: $dark-blue;
     margin-left: -35px;
+    z-index: 2;
   }
   .hero-what-makes {
     writing-mode: tb-rl;
     transform: rotate(-180deg);
     color: #cccccc;
     white-space: nowrap;
+    z-index: 2;
   }
   .hero-img {
     width: 50%;
@@ -714,6 +716,7 @@ label {
       position: absolute;
       bottom: 0 !important;
       left: 25% !important;
+      z-index: 3;
     }
     .circle-container {
       display: inline-block;
@@ -721,6 +724,7 @@ label {
       position: absolute;
       top: 11% !important;
       left: 25% !important;
+      z-index: 1;
       .dummy {
         margin-top: 100%;
       }
@@ -741,6 +745,7 @@ label {
     padding-right: 40px;
     color: #666666;
     position: relative;
+    z-index: 2;
     .arrow-down {
       width: 45px;
       height: 22.5px;
@@ -1406,6 +1411,17 @@ label {
   .hero-section {
     .hero-img {
       width: 40%;
+      &.hero-parallax {
+        .size-builder {
+          margin-bottom: 41.5%;
+        }
+      }
+      img {
+        width: 40%;
+      }
+      .circle-container {
+        width: 31.5%;
+      }
     }
     .hero-pro {
       margin-left: -55px;
@@ -1436,6 +1452,26 @@ label {
   .hero-section {
     .hero-img {
       width: 70%;
+      display: none;
+      &.hero-parallax {
+        display: block;
+        position: inherit;
+        width: 70%;
+        .size-builder {
+          margin-bottom: 0;
+        }
+        img {
+          width: 100%;
+          position: relative;
+          bottom: unset !important;
+          left: unset !important;
+        }
+        .circle-container {
+          top: 16% !important;
+          left: 0% !important;
+          width: 100%;
+        }
+      }
     }
     .hero-header {
       text-align: center;
@@ -1463,7 +1499,7 @@ label {
     .hero-description {
       width: 50%;
       position: absolute;
-      bottom: 85px;
+      bottom: 5px;
       text-align: center;
       padding-right: 0;
       margin-left: 0;

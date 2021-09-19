@@ -705,6 +705,7 @@ label {
           transform: rotate(-180deg);
   color: #030e28;
   margin-left: -35px;
+  z-index: 2;
 }
 
 .hero-section .hero-what-makes {
@@ -715,6 +716,7 @@ label {
           transform: rotate(-180deg);
   color: #cccccc;
   white-space: nowrap;
+  z-index: 2;
 }
 
 .hero-section .hero-img {
@@ -745,6 +747,7 @@ label {
   position: absolute;
   bottom: 0 !important;
   left: 25% !important;
+  z-index: 3;
 }
 
 .hero-section .hero-img .circle-container {
@@ -753,6 +756,7 @@ label {
   position: absolute;
   top: 11% !important;
   left: 25% !important;
+  z-index: 1;
 }
 
 .hero-section .hero-img .circle-container .dummy {
@@ -775,6 +779,7 @@ label {
   padding-right: 40px;
   color: #666666;
   position: relative;
+  z-index: 2;
 }
 
 .hero-section .hero-description .arrow-down {
@@ -1487,6 +1492,15 @@ label {
   .hero-section .hero-img {
     width: 40%;
   }
+  .hero-section .hero-img.hero-parallax .size-builder {
+    margin-bottom: 41.5%;
+  }
+  .hero-section .hero-img img {
+    width: 40%;
+  }
+  .hero-section .hero-img .circle-container {
+    width: 31.5%;
+  }
   .hero-section .hero-pro {
     margin-left: -55px;
   }
@@ -1514,6 +1528,26 @@ label {
   }
   .hero-section .hero-img {
     width: 70%;
+    display: none;
+  }
+  .hero-section .hero-img.hero-parallax {
+    display: block;
+    position: inherit;
+    width: 70%;
+  }
+  .hero-section .hero-img.hero-parallax .size-builder {
+    margin-bottom: 0;
+  }
+  .hero-section .hero-img.hero-parallax img {
+    width: 100%;
+    position: relative;
+    bottom: unset !important;
+    left: unset !important;
+  }
+  .hero-section .hero-img.hero-parallax .circle-container {
+    top: 16% !important;
+    left: 0% !important;
+    width: 100%;
   }
   .hero-section .hero-header {
     text-align: center;
@@ -1549,7 +1583,7 @@ label {
   .hero-section .hero-description {
     width: 50%;
     position: absolute;
-    bottom: 85px;
+    bottom: 5px;
     text-align: center;
     padding-right: 0;
     margin-left: 0;

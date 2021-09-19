@@ -211,6 +211,27 @@ $('.subscribe-form').submit(function(e) {
 });
 
 
-  let hero = document.getElementById('a-parallax')
-  var parallax = new Parallax(hero);
+  
+});
+
+let hero = document.getElementById('a-parallax')
+var parallax = new Parallax(hero);
+var parallaxEnable = true
+
+checkResolution();
+
+function checkResolution() {
+  var w = document.documentElement.clientWidth;
+  
+  if (w <= 768 && parallaxEnable == true){
+    parallax.destroy();
+    parallaxEnable = false;
+  } else if (w > 768 && parallaxEnable == false) {
+    parallax = new Parallax(hero);
+    parallaxEnable = true;
+  }
+}
+
+$(window).resize(function() {
+  checkResolution();
 });
